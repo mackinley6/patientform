@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 20% 80%;
+                grid-template-areas: "title"
+                                    "form";
+                margin: 0;
+                padding: 0; 
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url("background.png");
+                background-size: cover; /* This property ensures the image covers the entire background */
+                background-repeat: no-repeat; /* Prevent the image from repeating */
+                background-attachment: fixed; /* Keep the background image fixed as the content scrolls */
+            }
+        
+        .title{
+            grid-area: title;
+            display: flex;
+            font-size: 50px;
+            color: rgb(30, 16, 43);
+            margin-top: 150px;
+            justify-content: center;
+            align-items: center;
+            font-family: fantasy;
+        }
+        form{
+            margin-left: 39%;
+            margin-top: 50px;
+            width: 300px;
+            grid-area: form;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+        form input{
+            width: 300px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .input2{
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">
+        Army Medical
+    </h1>
+    <form action="patienForm.html" name="myForm">
+        <label for="Username"> Username</label>
+        <input type="text" required>
+        <label for="password">Password</label>
+        <input type="text" required><br>
+        <input style="background-color: rgb(34, 4, 34); color: white;" class="input2" type="submit" value="Log-in">
+        <input class="input2" type="reset">
+    </form>
+    
+</body>
+</html>

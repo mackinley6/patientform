@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 80%;
+            grid-template-areas: "title"
+                                 "patientform";
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(background2.png);
+            background-size: cover; /* This property ensures the image covers the entire background */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed;
+        }
+        .title{
+            grid-area: title;
+            display: flex;
+            margin-left: 322px;
+            font-size: 25px;
+            color: rgb(30, 16, 43);
+            font-family: fantasy;
+        }
+        .patientform{
+            grid-area: patientform;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+        form table tr td{
+            padding-right: 30px;
+            min-width: 210px;
+        }
+        form table{
+            padding-bottom: 15px;
+        }
+        .submitclear{
+            width: 100%;
+            text-align: right;
+        }
+        .purple{
+            font-weight: bold;
+            color: rgb(30, 16, 43));
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Patient Form</h1>
+    </div>
+    <div class="patientform">
+    <form action="Complete.html" id="cxForm">
+        <table>
+            <tr>
+                <td><input id="firstName" type="text" required></td>
+                <td><input id="middleName" type="text"></td>
+                <td><input id="lastName" type="text" required></td>
+            </tr>
+            <tr>
+                <td class="purple">First Name*</td>
+                <td class="purple">Middle Name</td>
+                <td class="purple">Last Name*</td>
+            </tr>
+        </table><br>
+        <table>
+            <tr>
+                <td colspan="3"><input id="address" type="text" style="width: 640px;"></td>
+            </tr>
+            <tr>
+                <td class="purple" colspan="3">Address*</td>
+            </tr>
+        </table><br>
+        <table>
+            <tr>
+                <td><input type="date" id="birthDate" required></td>
+                <td><input type="number" id="contactNumber" required></td>
+                <td><label class="purple">Gender*</label>
+                    <input type="radio" id="gender" value="Male" name="gender" required>Male
+                    <input type="radio" id="gender" value="Female" name="gender" required>Female
+                </td>
+            </tr>
+            <tr>
+                <td class="purple">
+                    Birthdate*
+                </td>
+                <td class="purple" colspan="2">
+                    Contact Number*
+                </td>
+            </tr>
+            <tr>
+        </table>
+        <table>
+                <td class="purple">
+                    Medical History:
+                </td>
+                <td>
+                    <input name="history" type="checkbox" value="Asthma">Asthma<br>
+                    <input name="history" type="checkbox" value="Cancer">Cancer<br>
+                    <input name="history" type="checkbox" value="Cardiac Disease">Cardiac Disease<br>
+                    <input name="history" type="checkbox" value="Diabetes">Diabetes
+                </td>
+                <td>
+                    <input name="history" type="checkbox" value="Hypertension">Hypertension<br>
+                    <input name="history" type="checkbox" value="Psychiatric Disorder">Psychiatric Disorder<br>
+                    <input name="history" type="checkbox" value="Epilepsy">Epilepsy<br>
+                    <input name="history" type="checkbox" value="Others">Others
+                </td>
+            </tr>
+        </table><br>
+        <table>
+            <tr>
+                <td class="purple">
+                    Current Symptoms:
+                </td>
+                <td>
+                    <select name="" id="symptoms" multiple>
+                        <option value="Chest Pain">Chest Pain</option>
+                        <option value="Respiratory">Respiratory</option>
+                        <option value="Germatological">Germatological</option>
+                        <option value="Lymphatic">Lymphatic</option>
+                        <option value="Psychological">Psychological</option>
+                        <option value="Dermatological">Dermatological</option>
+                    </select>
+                </td>
+                <td>
+                    <label class="purple" for="answer">Are you currently taking <br> medications?</label><br>
+                    <input id="yesorno" type="radio" name="answer" value="Yes" required>Yes<br>
+                    <input id="yesorno" type="radio" name="answer" value="No" required>No
+                </td>
+            </tr>
+        </table>
+        <table class="submitclear">
+            <tr>
+                <td>
+                    <input style="background-color: rgb(30, 16, 43); color: white;" type="submit" name="Submit" id="submitinfo" value="SUBMIT">
+                    <input style="background-color: rgb(73, 68, 68); color: white;" type="reset" name="Clear" id="" value="RESET">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+
+
+    <script type="text/javascript" src="patientForm.js">
+
+    </script>
+    
+</body>
+</html>
